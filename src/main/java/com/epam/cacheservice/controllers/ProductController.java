@@ -19,6 +19,7 @@ public class ProductController {
     public boolean isProductAvailable(@RequestParam long productId)
     {
        return productService.isProductAvailable(productId);
+
     }
 
 }

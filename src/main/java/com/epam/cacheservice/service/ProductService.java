@@ -2,7 +2,6 @@ package com.epam.cacheservice.service;
 
 import com.epam.cacheservice.models.Product;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Random;
 
@@ -15,6 +14,7 @@ public class ProductService {
     }
 
     private boolean slowMethodEmulatedRequest(long productId)
+
     {
         try {
             Thread.sleep(1000);
