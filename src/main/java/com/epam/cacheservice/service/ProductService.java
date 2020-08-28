@@ -1,6 +1,6 @@
 package com.epam.cacheservice.service;
 
-import com.epam.cacheservice.models.Product;
+
 import org.springframework.stereotype.Service;
 
 import java.util.Random;
@@ -8,16 +8,14 @@ import java.util.Random;
 @Service
 public class ProductService {
 
-    public boolean isProductAvailable(long productId)
-    {
-       return slowMethodEmulatedRequest(productId);
+    public boolean isProductAvailable(long productId) {
+        return slowMethodEmulatedRequest(productId);
     }
 
-    private boolean slowMethodEmulatedRequest(long productId)
-
-    {
+    private boolean slowMethodEmulatedRequest(long productId) {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(300);
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
